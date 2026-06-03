@@ -77,7 +77,7 @@ dns-detector --interface eth0 --config my_config.toml --alert-threshold 0.7
 ## Detection Methods
 
 | Method | What it catches | Data needed |
-|--------|----------------|-------------|
+| -------- | ---------------- | ------------- |
 | TTL drop analysis | Cache poisoning attempts | Live capture or logs |
 | Multi-resolver cross-check | Active spoofing / MITM | Active resolver queries |
 | Subdomain entropy | DNS tunneling (data exfil) | Any DNS traffic |
