@@ -70,10 +70,6 @@ class TtlAnalyzer:
 
         return anomalies
 
-    # ------------------------------------------------------------------
-    # Private helpers
-    # ------------------------------------------------------------------
-
     def _check_drop(self, event: DnsEvent, prev_ttl: int, current_ttl: int) -> Anomaly | None:
         # Flag a significant drop from the previously-seen TTL
         if prev_ttl == 0:
