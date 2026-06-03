@@ -21,7 +21,7 @@ import math
 from collections import Counter
 from dataclasses import dataclass
 
-from ..models import Anomaly, DetectionMethod, DnsEvent, Severity
+from dns_detector import Anomaly, DetectionMethod, DnsEvent, Severity
 
 
 def shannon_entropy(s: str) -> float:

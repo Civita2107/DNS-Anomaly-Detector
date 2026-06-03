@@ -22,7 +22,7 @@ from collections import deque
 from dataclasses import dataclass, field
 from datetime import datetime
 
-from dns_detector.models import Anomaly, DetectionMethod, DnsEvent, Severity
+from dns_detector import Anomaly, DetectionMethod, DnsEvent, Severity
 
 
 @dataclass
