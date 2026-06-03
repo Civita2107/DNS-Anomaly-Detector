@@ -5,15 +5,15 @@ and tunneling.
 
 ## Features
 
-- **Packet capture** — live sniffing via Scapy or raw sockets (requires root/admin)
-- **Resolver cross-checking** — queries multiple trusted resolvers and flags discrepancies
-- **TTL analysis** — detects sudden TTL drops that indicate cache poisoning
-- **Entropy detection** — flags high-entropy subdomains used in DNS tunneling
-- **Anomaly scoring** — weighted rule engine aggregates signals into a risk score
-- **SQLite persistence** — stores domain history for baseline and trend analysis
-- **Rich CLI dashboard** — live feed of events with color-coded severity
-- **Alert engine** — configurable thresholds trigger warnings/criticals
-- **JSON & HTML export** — structured logs and human-readable reports
+- **Packet capture:** live sniffing via Scapy or raw sockets (requires root/admin)
+- **Resolver cross-checking:** queries multiple trusted resolvers and flags discrepancies
+- **TTL analysis:** detects sudden TTL drops that indicate cache poisoning
+- **Entropy detection:** flags high-entropy subdomains used in DNS tunneling
+- **Anomaly scoring:** weighted rule engine aggregates signals into a risk score
+- **SQLite persistence:** stores domain history for baseline and trend analysis
+- **Rich CLI dashboard:** live feed of events with color-coded severity
+- **Alert engine:** configurable thresholds trigger warnings/criticals
+- **JSON & HTML export:** structured logs and human-readable reports
 
 ## Project Structure
 
