@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "dns-anomaly-detector"
+version = "0.1.0"
+description = "A defensive DNS monitoring tool that detects spoofing, poisoning, and tunneling"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["dns", "security", "network", "anomaly-detection", "defensive"]
+
+dependencies = [
+    "scapy>=2.5",           # Packet capture & DNS parsing
+    "dnspython>=2.4",       # Resolver queries
+    "aiosqlite>=0.19",      # Async SQLite
+    "rich>=13.0",           # CLI dashboard
+    "typer>=0.9",           # CLI framework
+    "tomli>=2.0",           # Config file parsing (TOML)
+    "httpx>=0.25",          # RDAP / WHOIS HTTP queries
+    "scipy>=1.11",          # Entropy & statistical analysis
+    "jinja2>=3.1",          # HTML report templating
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-asyncio>=0.21",
+    "pytest-cov>=4.1",
+    "ruff>=0.1",
+    "mypy>=1.7",
+    "scapy>=2.5",
+]
+
+[project.scripts]
+dns-detector = "dns_detector.main:app"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
